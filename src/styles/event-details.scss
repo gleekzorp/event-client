@@ -1,0 +1,86 @@
+.event-details-heading {
+    font-family: $fontOne;
+    text-align: center;
+}
+
+.event-details-item {
+    font-size: 1.25rem;
+    // text-transform: uppercase;
+}
+
+.event-details-item-heading-wrapper {
+    display: flex;
+    align-items: center;
+    color: $colorThree;
+}
+
+.event-details-item-heading-text {
+    font-size: 1.75rem;
+    font-family: $fontOne;
+}
+
+.event-details-icon {
+    font-size: 1.25rem;
+    color: $colorThree;
+    margin-right: .5em;
+}
+
+.event-details-content {
+    margin: 0.25em 0 1.75em 0;
+}
+
+.event-details-edit-delete-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2em 0;
+}
+
+.event-details-btn {
+    width: 100%;
+    font-size: 1.25rem;
+    letter-spacing: .25em;
+    background-color: $colorBtn;
+    border-radius: .5em;
+    border: none;
+    padding: 1em 1.25em;
+    text-align: center;
+    color: $colorTextDarkBtn;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+        background: $colorBtnHover;
+    }
+}
+
+.event-details-btn + .event-details-btn {
+    margin-top: 1em;
+}
+
+.danger {
+    background: $colorDanger;
+    &:hover {
+        background: $colorDangerHover;
+    }
+}
+
+@media (min-width: 725px) {
+    .container {
+        width: 75%;
+    }
+
+    .event-details-heading h1 {
+        margin-top: 0;
+        font-size: 3rem;
+    }
+
+    .event-details {
+        .container {
+          background: $colorEight;
+          padding: 2em 4em 2em 4em;
+        }
+    }
+}

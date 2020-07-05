@@ -1,0 +1,47 @@
+// TODO: When the user is on view details I don't like that all the nav items go white.
+//       Maybe make the star always be teal
+nav {
+    font-family: $fontOne;
+    font-size: 1.25rem;
+    background: $colorFive;
+    padding: 1em 0;
+}
+
+nav > ul {
+    padding: 0;
+}
+
+.nav-items-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item-wrapper {
+    list-style: none;
+    .nav-item {
+        &:hover {
+            color: $colorSix
+        }
+    }
+}
+
+.nav-item {
+    color: $colorOne;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-icon {
+    margin-right: .5em;
+}
+
+.active {
+    color: $colorSix
+}
+
+@media (min-width: 725px) {
+    nav {
+        font-size: 2rem;
+    }
+}

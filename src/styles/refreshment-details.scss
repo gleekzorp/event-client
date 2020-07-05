@@ -1,0 +1,25 @@
+.refreshment-details-wrapper {
+  margin-top: 2em;
+  padding: 1em;
+  box-shadow: 0px 0px 10px 0px #0b1326;
+}
+
+.refreshment-name {
+  font-size: 3rem;
+  font-family: $fontOne;
+}
+
+.refreshment-assign-btn {
+  background: $colorSix;
+  width: 40%;
+  padding: .5em;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 1em;
+  border-radius: $borderRadiusTwo;
+}
+
+.reAssign-btn {
+  background: $colorTwo;
+}
