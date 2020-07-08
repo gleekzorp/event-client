@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 
 import AssignModal from '../modals/AssignModal';
 import ReAssignModal from '../modals/ReAssignModal';
+import api from '../../helpers/api';
 
 const RefreshmentDetails = (props) => {
     const [assignModalIsOpen, setAssignModalIsOpen] = useState(false)
@@ -25,10 +25,10 @@ const RefreshmentDetails = (props) => {
     }
 
     const handleTakenBySubmit = (takenByName, assignmentType) => {
-        axios(
+        api(
             {
                 method: 'put',
-                url: `http://localhost:5000/api/events/${assignmentType}/${props.refreshment._id}`,
+                url: `${assignmentType}/${props.refreshment._id}`,
                 data: {takenBy: takenByName}
             }
         )

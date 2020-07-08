@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import UpComingEvent from '../event/UpComingEvent';
+import api from '../../helpers/api';
 
 const Home = () => {
     const [events, setEvents] = useState([])
     const [isLoadingEvent, setIsLoadingEvent] = useState(true);
 
     const fetchEvents = () => {
-        axios.get('http://localhost:5000/api/events')
+        api.get()
             .then(res => {
                 console.log(res)
                 setIsLoadingEvent(false)

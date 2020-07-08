@@ -4,8 +4,9 @@
 // TODO: Make the functionality more like gitKrakens glowboards tasklist
 // TODO: When you add a new refreshment and you want to get rid of the first one you can't since I don't let you get rid of the first.  Maybe you can get rid of the text at least
 import React, { useState } from 'react';
-import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import api from '../../helpers/api';
 
 const CreateEventForm = (props) => {
     const [eventName, setEventName] = useState("")
@@ -53,10 +54,10 @@ const CreateEventForm = (props) => {
     
     const handleSubmit = (event) => {
         event.preventDefault()
-        axios(
+        api(
             {
                 method: 'post',
-                url: 'http://localhost:5000/api/events/add-event',
+                url: 'add-event',
                 data: {
                     eventName: eventName,
                     eventDate: eventDate,

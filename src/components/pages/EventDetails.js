@@ -2,9 +2,9 @@
 // TODO: Create a modal to open after the user pushes delete to ask if they want to delete or cancel
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import axios from 'axios';
 
 import RefreshmentDetails from '../event/RefreshmentDetails';
+import api from '../../helpers/api';
 
 const EventDetails = (props) => {
     const [event, setEvent] = useState([])
@@ -14,7 +14,7 @@ const EventDetails = (props) => {
     const [isLoadingEditDelete, setIsLoadingEditDelete] = useState(false);
 
     const fetchEvent = () => {
-        axios.get(`http://localhost:5000/api/events/get-event/${props.match.params.slug}`)
+        api.get(`get-event/${props.match.params.slug}`)
             .then(res => {
                 if (res.data === null) {
                     props.history.push('/event-no-longer-exists')
@@ -52,7 +52,7 @@ const EventDetails = (props) => {
 
     const handleDeleteEvent = () => {
         setIsLoadingEditDelete(true)
-        axios.delete(`http://localhost:5000/api/events/delete-event/${props.match.params.slug}`)
+        api.delete(`delete-event/${props.match.params.slug}`)
             .then(res => {
                 if (res.data === "Event Deleted!") {
                     props.history.push('/')
