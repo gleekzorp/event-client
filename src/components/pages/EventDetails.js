@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import RefreshmentDetails from '../event/RefreshmentDetails';
 import api from '../../helpers/api';
+import convertMilitary from '../../helpers/convertMilitary';
 
 const EventDetails = (props) => {
     const [event, setEvent] = useState([])
@@ -99,7 +100,8 @@ const EventDetails = (props) => {
                                 <FontAwesomeIcon icon={'clock'} className="event-details-icon"/>
                                 <div className="event-details-item-heading-text">Time:</div>
                             </div>
-                            <div className="event-details-content">{event.eventTime}</div>
+                            {/* <div className="event-details-content">{event.eventTime}</div> */}
+                            <div className="event-details-content">{event.eventTime ? convertMilitary(event.eventTime) : null}</div>
                         </div>
                         <div className="event-details-item">
                             <div className="event-details-item-heading-wrapper">

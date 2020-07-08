@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import convertMilitary from '../../helpers/convertMilitary';
 
 
 const UpComingEvent = (props) => {
@@ -29,7 +30,7 @@ const UpComingEvent = (props) => {
                 </div>
                 <div className="upcoming-events-content-item">
                     <div>
-                        {eventTime}
+                        {convertMilitary(eventTime)}
                     </div>
                     <div>
                         <FontAwesomeIcon icon={'clock'} className="upcoming-events-icon"/>
