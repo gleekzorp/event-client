@@ -168,7 +168,7 @@ const CreateEventForm = (props) => {
 
             {
                 refreshments.map((val, idx) => {
-                    const refreshmentId = `refreshment-${idx}`;
+                    // const refreshmentId = `refreshment-${idx}`;
                     return (
                         <div key={`refreshment-${idx}`} className="form-group-wrapper">
                             <div className="refreshment-label-icon-wrapper">
