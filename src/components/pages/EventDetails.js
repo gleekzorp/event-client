@@ -71,6 +71,7 @@ const EventDetails = (props) => {
 
     const handleEditEvent = () => {
         console.log('handleeditevent')
+        props.history.push(`/edit-event/${props.match.params.slug}`)
     }
 
     return (

@@ -13,6 +13,8 @@ import NoMatch from './pages/NoMatch';
 import CreateEvent from './pages/CreateEvent';
 import EventDetails from './pages/EventDetails';
 import EventNoLongerExists from './pages/EventNoLongerExists';
+import EditEvent from './pages/EditEvent';
+import EditEventForm from './event/EditEventForm';
 
 const App = () => {
   Icons()
@@ -22,6 +24,7 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route path="/create-event" component={CreateEvent}/>
+        <Route path="/edit-event/:slug" component={EditEventForm}/>
         <Route path="/event-details/:slug" component={EventDetails}/>
         <Route exact path="/event-no-longer-exists" component={EventNoLongerExists}/>
         <Route component={NoMatch}/>
