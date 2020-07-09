@@ -13,7 +13,6 @@ import NoMatch from './pages/NoMatch';
 import CreateEvent from './pages/CreateEvent';
 import EventDetails from './pages/EventDetails';
 import EventNoLongerExists from './pages/EventNoLongerExists';
-import EditEvent from './pages/EditEvent';
 import EditEventForm from './event/EditEventForm';
 
 const App = () => {

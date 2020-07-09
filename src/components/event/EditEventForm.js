@@ -33,7 +33,7 @@ const EditEventForm = (props) => {
       .catch(err => {
           console.log('fetchEvents Error: ', err)
       })
-    }, [])
+    }, [props.match.params.slug])
     // }, [props.match.params.slug])
 
     // useEffect(() => {
