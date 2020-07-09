@@ -1,11 +1,12 @@
 // TODO: Is it best to push users to a event-no-longer-exists page or just have a ternary in the return
 // TODO: Create a modal to open after the user pushes delete to ask if they want to delete or cancel
 import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import RefreshmentDetails from '../event/RefreshmentDetails';
 import api from '../../helpers/api';
 import convertMilitary from '../../helpers/convertMilitary';
+import convertDate from '../../helpers/convertDate';
 
 const EventDetails = (props) => {
     const [event, setEvent] = useState([])
@@ -93,7 +94,7 @@ const EventDetails = (props) => {
                                 <FontAwesomeIcon icon={'calendar-alt'} className="event-details-icon"/>
                                 <div className="event-details-item-heading-text">Date:</div>
                             </div>
-                            <div className="event-details-content">{event.eventDate}</div>
+                            <div className="event-details-content">{convertDate(event.eventDate)}</div>
                         </div>
                         <div className="event-details-item">
                             <div className="event-details-item-heading-wrapper">
